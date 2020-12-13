@@ -55,10 +55,17 @@ a {
 /* reset css */
 
 /* common area */
+html {
+    scroll-behavior: smooth;
+    font-size: 20px;
+}
 .container {
     width: 1200px;
     margin: 0 auto;
     position: relative;
+}
+b{
+    font-weight: bold;
 }
 /* common area */
 
@@ -67,6 +74,7 @@ a {
     position: fixed;
     width: 100%;
     height: 100%;
+    z-index: 1; /*position이 있을 때만 효력을 발휘함*/
 }
 #header #check {
     display: none;
@@ -77,6 +85,7 @@ a {
     right: 10px;
     font-size: 40px;
     transition: 1s;
+    cursor: pointer;
 }
 #header .hide {
     opacity: 1;
@@ -134,5 +143,188 @@ a {
     top: 50%;
     transform: translateY(-50%);
 }
-
 /* main area */
+
+/*intro area*/
+#intro {
+    padding: 5rem 0;
+}
+#intro h3 {
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center;
+    color: #4e54c8;
+    margin-bottom: 5rem;
+}
+#intro .container {
+    display: flex;
+    justify-content: space-between;
+}
+#intro .container .intro-cont {
+    flex-basis: 350px;
+}
+#intro .container .intro-cont .intro-img {
+    width: 80%;
+    padding-top: 80%;
+    background-color: #9a9fff;
+    margin: 0 auto;
+    border-radius: 50%;
+    border: 5px solid #4e54c8;
+}
+#intro .container .intro-cont p {
+    font-size: 2rem;
+    text-align: center;
+    margin: 2rem 0;
+    letter-spacing: -1px;
+}
+#intro .container .cont01 .intro-img {
+    background-image: url(../images/img1.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+#intro .container .cont02 .intro-img {
+    background-image: url(../images/img2.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+#intro .container .cont03 .intro-img {
+    background-image: url(../images/img3.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+/*intro area*/
+
+/*info area*/
+#info {
+    padding: 5rem 0;
+    background: #d3b9d4;
+}
+#info h3 {
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center;
+    color: #B06AB3;
+    margin-bottom: 5rem;
+}
+#info .container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#info #map{
+    width: 30%;
+    margin-right: 3rem;
+}
+#info #map iframe {
+    width: 100%;
+    height: 20rem;
+}
+#info .info-txt p{
+    font-size: 1.2rem;
+    margin: 1rem 0;
+}
+#info .info-txt p i {
+    margin-right: 1rem;
+}
+/*info area*/
+
+/*MEDIA QUERY 1200px 이하*/
+@media (max-width: 1200px) {
+    /* common area */
+    html {
+        font-size: 14px;
+    }
+    .container {
+        width: 100%;
+    }
+/* common area */
+    /* main area */
+    #main {
+    
+    }
+    #main .container {
+
+}
+    #main h2 {
+        font-size: 4rem;
+}
+/* main area */
+
+/*intro area*/
+#intro {
+    
+}
+#intro h3 {
+    font-size: 3rem;
+}
+#intro .container {
+    display: flex;
+    /*justify-content: space-between;*/
+    align-items: center;
+    flex-direction: column;
+}
+#intro .container .intro-cont {
+    width: 100%;
+}
+#intro .container .intro-cont .intro-img {
+    width: 80%;
+    padding-top: 80%;
+    background-color: #9a9fff;
+    margin: 0 auto;
+    border-radius: 50%;
+    border: 5px solid #4e54c8;
+}
+#intro .container .intro-cont p {
+    font-size: 2rem;
+    text-align: center;
+    margin: 2rem 0;
+    letter-spacing: -1px;
+}
+#intro .container .cont01 .intro-img {
+    background-image: url(../images/img1.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+#intro .container .cont02 .intro-img {
+    background-image: url(../images/img2.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+#intro .container .cont03 .intro-img {
+    background-image: url(../images/img3.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+/*intro area*/
+
+/*info area*/
+    #info {
+        padding: 5rem 0;
+        background: #d3b9d4;
+    }
+    #info h3 {
+        font-size: 3rem;
+    }
+    #info .container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #info #map{
+        width: 40%;
+        margin: 0 auto 4rem;
+    }
+    #info #map iframe {
+        width: 100%;
+        height: 20rem;
+    }
+    #info .info-txt p{
+        text-align: center;
+    }
+/*info area*/
+}
