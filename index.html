@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <div class="wrap">
+<div class="wrap">
         <!--HEADER-->
         <header id="header">
             <input type="checkbox" id="check">
@@ -63,7 +63,8 @@
             <h3>Information</h3>
             <div class="container">
                 <div id="map">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3162.9954926492373!2d126.93552131531138!3d37.55516997980004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357c99435b81823f%3A0xe1017c59f2db9ec1!2z7Iug7LSM7JetNeuyiOy2nOq1rA!5e0!3m2!1sko!2skr!4v1607830066895!5m2!1sko!2skr" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                    <!--<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3162.9954926492373!2d126.93552131531138!3d37.55516997980004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357c99435b81823f%3A0xe1017c59f2db9ec1!2z7Iug7LSM7JetNeuyiOy2nOq1rA!5e0!3m2!1sko!2skr!4v1607830066895!5m2!1sko!2skr" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>-->
+
                 </div>
                 <div class="info-txt">
                     <p><i class="xi-home-o"></i>서울특별시 마포구 신촌</p>
@@ -72,7 +73,31 @@
                 </div>
             </div>
         </section>
-        <!-- INFO -->
-    </div>
+    <!-- INFO -->
+</div>
+<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=e4068402f474343b94014d917347ba6d"></script>
+<script>
+    var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
+    mapOption = { 
+    center: new kakao.maps.LatLng(33.450701, 126.570667), // 지도의 중심좌표
+    level: 3 // 지도의 확대 레벨
+    };
+
+    var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
+
+    // 마커가 표시될 위치입니다 
+    var markerPosition  = new kakao.maps.LatLng(33.450701, 126.570667); 
+
+    // 마커를 생성합니다
+    var marker = new kakao.maps.Marker({
+        position: markerPosition
+    });
+
+    // 마커가 지도 위에 표시되도록 설정합니다
+    marker.setMap(map);
+
+    // 아래 코드는 지도 위의 마커를 제거하는 코드입니다
+    // marker.setMap(null);    
+</script>
 </body>
 </html>
